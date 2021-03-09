@@ -9,16 +9,19 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <a href="" id="header-logo" class="logo"></a>
-            <a  href="" id="brand-symbol-nav" class="brand-symbol">
-                <h1>tripPlanner</h1>
-            </a>
-            <div id="nav-middle"></div>
-            <a href="" id="login">Login</a>
+        <header id="navigation">
+            <div id="nav-container">
+                <a href="" id="header-logo" class="logo"></a>
+                <a  href="" id="brand-symbol-nav" class="brand-symbol" class="nav-item">
+                    <h1>tripPlanner</h1>
+                </a>
+                <div id="nav-middle"></div>
+                <a href="" id="login" class="nav-item"></a>
+            </div>
         </header>
+        <a href="#section-1" id="nav-explore-button" class="button">Begin the Adventure</a>
         <main>
-            <section id="section-1" data-nav="section-1-nav">
+            <section id="section-1" data-nav="Plan">
                 <article id="s1-content">
                     <h2 id="plan-your-trip" class="section-descriptor">Use AI to plan your next trip.</h2>
                     <p>Find the <span>adventure</span> you didn't know you were looking for. </p>
@@ -28,79 +31,138 @@
                         <input type="text" name="date-box" class="form-box" placeholder="Dates" required>
                         <input type="text" name="attendees-box" class="form-box" placeholder="Attendees" required>
                     </div>
-                    <input id="trip-planning-form-button" class="button" type="button" value="Begin the Adventure">
+                    <a href="" id="trip-planning-form-button" class="button">Begin the Adventure</a>
                 </article>
             </section>
-            <section id="section-2" data-nav="section-2-nav">
-                <article id="s2-content" class="how-to-content">
-                    <div class="how-to-left">
-                        <div id="how-it-works-box1" class="box"></div>
-                    </div>
-                    <div class="how-to-right">
-                        <div id="how-it-works=s1" class="how-to-text">
-                            <h4>Step 1</h4>
-                            <h3>Set your budget</h3>
-                            <p class="how-to-description">
-                                Tell us how much you are willing to spend on flights, when you plan to leave, 
-                                how long your adventure will be, and how many people will accompany you. With
-                                just these few details, we'll be able to help you plan your dream experience. 
-                            </p>
+            <section id="section-2" data-nav="How To">
+                <div class="how-to-container">
+                    <article id="how-to-1" class="how-to-content">
+                        <div class="how-to-left">
+                            <div id="how-it-works-box1" class="box"></div>
                         </div>
-                    </div>
-                </article>
-            </section>
-            <section id="section-3" data-nav="section-3-nav">
-                <article id="s3-content" class="how-to-content">
-                    <div class="how-to-left">
-                        <div id="how-it-works-s2">
-                            <h4>Step 2</h4>
-                            <h3>Watch the magic</h3>
-                            <p class="how-to-description">
-                                tripPlanner will search thousands of flights to bring amazing and in-budget 
-                                itineraries right to your fingertips. As we get to know you better, we'll be
-                                able to customize recommendations for your preferences.
-                            </p>
+                        <div class="how-to-right">
+                            <div id="how-it-works=s1" class="how-to-text">
+                                <h4>Step 1</h4>
+                                <h3>Set your budget</h3>
+                                <p class="how-to-description">
+                                    Tell us how much you are willing to spend on flights, when you plan to leave, 
+                                    how long your adventure will be, and how many people will accompany you. With
+                                    just these few details, we'll be able to help you plan your dream experience. 
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="how-to-right">
-                        <div id="how-it-works-box2" class="box"></div>
-                    </div>
-                </article>
-            </section>
-            <section id="section-4" data-nav="section-4-nav">
-                <article id="s4-content" class="how-to-content">
-                    <div class="how-to-left">
-                        <div id="how-it-works-box3" class="box"></div>
-                    </div>
-                    <div class="how-to-right">
-                        <div id="how-it-works-s3">
-                            <h4>Step 3</h4>
-                            <h3>Explore</h3>
-                            <p class="how-to-description">
-                                Use a series of filters to generate a curated list of adventures. Save the
-                                itineraries that you like for an easy comparison. Share with your group 
-                                and even poll their preferences. 
-                            </p>
+                    </article>
+                    <article id="how-to-2" class="how-to-content">
+                        <div class="how-to-left">
+                            <div id="how-it-works-s2">
+                                <h4>Step 2</h4>
+                                <h3>Watch the magic</h3>
+                                <p class="how-to-description">
+                                    tripPlanner will search thousands of flights to bring amazing and in-budget 
+                                    itineraries right to your fingertips. As we get to know you better, we'll be
+                                    able to customize recommendations for your preferences.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                        <div class="how-to-right">
+                            <div id="how-it-works-box2" class="box"></div>
+                        </div>
+                    </article>
+                    <article id="how-to-3" class="how-to-content">
+                        <div class="how-to-left">
+                            <div id="how-it-works-box3" class="box"></div>
+                        </div>
+                        <div class="how-to-right">
+                            <div id="how-it-works-s3">
+                                <h4>Step 3</h4>
+                                <h3>Explore</h3>
+                                <p class="how-to-description">
+                                    Use a series of filters to generate a curated list of adventures. Save the
+                                    itineraries that you like for an easy comparison. Share with your group 
+                                    and even poll their preferences. 
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
-            <section id="section-5" data-nav="section-5-nav">
-                <article id="s5-content">
+            <section id="section-3" data-nav="Planning Tools">
+                <article id="s3-content">
                     <h2>Find your next adventure</h2>
                     <div class="card-container">
-                        <div id="card1" class="card"></div>
-                        <div id="card2" class="card"></div>
-                        <div id="card3" class="card"></div>
-                        <div id="card4" class="card"></div>
-                        <div id="card5" class="card"></div>
-                        <div id="card6" class="card"></div>
+                        <a href="" id="card1" class="card">
+                            <div id="card-thumb-1" class="card-thumb">
+                                <img class="img" src="images/skication.jpg">
+                            </div>
+                            <h4 class="card-description">Skication</h4>
+                            <div class="card-copy">
+                                Find back country trails and wide open groomers as you 
+                                hit the slopes at the world's greatest peaks.
+                            </div>
+                        </a>
+                        <a href="" id="card2" class="card">
+                            <div id="card-thumb-2" class="card-thumb">
+                                <img class="img" src="images/beach-paradise.jpg">
+                            </div>
+                            <h4 class="card-description">Beach Paradise</h4>
+                            <div class="card-copy">
+                                Kick back and relax as you take in the warm sand and sun
+                                on a beach vacation. 
+                            </div>
+                        </a>
+                        <a href="" id="card3" class="card">
+                            <div id="card-thumb-2" class="card-thumb">
+                                <img class="img" src="images/site-seeing.jpg">
+                            </div>
+                            <h4 class="card-description">Sight-Seeing</h4>
+                            <div class="card-copy">
+                                Travel back in time as you visit tourist attractions
+                                accross the globe. 
+                            </div>
+                        </a>
+                        <a href="" d="card4" class="card">
+                            <div id="card-thumb-2" class="card-thumb">
+                                <img class="img" src="images/city.jpg">
+                            </div>
+                            <h4 class="card-description">Urban Adventure</h4>
+                            <div class="card-copy">
+                                Sky-scrapers, food, or shopping; find your adventure
+                                in one of the world's biggest cities.
+                            </div>
+                        </a>
+                        <a href="" id="card5" class="card">
+                            <div id="card-thumb-2" class="card-thumb">
+                                <img class="img" src="images/national-park.jpg">
+                            </div>
+                            <h4 class="card-description">National Parks</h4>
+                            <div class="card-copy">
+                                Embrace the great outdoors in one of these 
+                                beautiful landscapes. 
+                            </div>
+                        </a>
+                        <a href="" id="card6" class="card">
+                            <div id="card-thumb-2" class="card-thumb">
+                                <img class="img" src="images/farmers-market.jpg">
+                            </div>
+                            <h4 class="card-description">Foodie Favorites</h4>
+                            <div class="card-copy">
+                                Get to know a culture through its food at one of these
+                                top foodie destinations. 
+                            </div>
+                        </a>
                     </div>
                 </article>
             </section>
         </main>
         <footer>
-            <div id="copyright">Copyright Molly</div>
+            <div class="footer-info">
+                <div id="copyright">Copyright tripPlanner LLC</div>
+                <a href="" class="footer-detail">Frequently Asked Questions</a>
+                <a href="" class="footer-detail">Partner with Us</a>
+                <a href="" class="footer-detail">Media Inquiries</a>
+                <a href="" class="footer-detail">Paid Sponsorships</a>
+            </div>
         </footer>
     </body>
+    <script src="js/app.js" type="text/javascript"></script> 
 </html>
