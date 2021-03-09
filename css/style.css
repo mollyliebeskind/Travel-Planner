@@ -11,7 +11,7 @@ html {
 
 body {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: 20vh minmax(80vh, auto) minmax(20vh, auto);
     margin:0;
     padding:0;
@@ -65,18 +65,22 @@ a {
     position: relative;
     transition: all .1s ease-in;
 }
+
 a:visited { 
     text-decoration: none; 
     color:#F4F6F6; 
 }
+
 a:hover { 
     text-decoration: none; 
     color:#F4F6F6; 
 }
+
 a:focus { 
     text-decoration: none; 
     color:#F4F6F6; 
 }
+
 a:hover, a:active { 
     text-decoration: none; 
     top: -2px;
@@ -88,7 +92,7 @@ a:hover, a:active {
     border-radius: 4px;
     border: 0px;
     line-height: 26px;
-    height: 48px;
+    height: 2.4em;;
     margin: 2%;
     background: #36B6BB;
     color: #F4F6F6;
@@ -101,7 +105,7 @@ a:hover, a:active {
 
 /* navigation */
 header {
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 2;
     z-index: 1000;
     position: fixed;
     width: 100%;
@@ -132,7 +136,7 @@ header {
 
 #login {
     background: url(../images/person-icon-white.png);
-    width: 4px;
+    width: 2%;
     height: 10px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -154,18 +158,17 @@ header {
 }
 
 #nav-explore-button {
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 2;
     z-index: 10000;
     position: fixed;
     margin: 2% 0% 0% 0%;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    right: 1%;
     display: none;
 }
 
 /* main content */
 main {
-    grid-area: 1 / 1 / 3 / 3;
+    grid-area: 1 / 1 / 3 / 2; 
 }
 
 article {
@@ -188,19 +191,19 @@ article {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 30vh 0vh 0vh 0vh;
+    padding: 20vh 2vh 0vh 2vh;
 }
 
 #trip-planning-form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .form-box {
     background: #F4F6F6;
-    margin: 0% 0.25% 0% 0.25%;
+    margin: 1% 0% 1% 0%;
     border-radius: 4px;
     border: 0px;
     line-height: 2em;
@@ -211,16 +214,16 @@ article {
 
 .how-to-container {
     display: grid;
-    grid-template-rows: repeat(3, minmax(80vh,auto));
-    padding: 5% 5% 5% 5%;
+    grid-template-rows: repeat(3, minmax(20vh,auto));
+    padding: 5% 0% 15% 0%;
 }
 
 .how-to-content {
     color: #22395c;
     background: #F4F6F6;
     display: grid;
-    grid-gap: 0% 5%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0%;
+    grid-template-rows: repeat(2, 1fr);
     align-items: center;
 }
 
@@ -246,9 +249,13 @@ article {
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
-    height: 55vh;
+    height: 30vh;
     border-radius: 5%;
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+#how-to-desc-1 {
+    grid-row: 1;
 }
 
 #how-it-works-box1 {
@@ -273,10 +280,10 @@ article {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20vh;
-    padding: 10% 5% 5% 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 15vh;
+    padding: 30% 5% 20% 5%;
 }
 
 .card {
@@ -328,16 +335,16 @@ img {
 }
 
 #card1 { grid-area: 1 / 1 / 2 / 2; }
-#card2 { grid-area: 1 / 2 / 2 / 3; }
-#card3 { grid-area: 1 / 3 / 2 / 4; }
-#card4 { grid-area: 2 / 1 / 3 / 2; }
-#card5 { grid-area: 2 / 2 / 3 / 3; }
-#card6 { grid-area: 2 / 3 / 3 / 4; }
+#card2 { grid-area: 2 / 1 / 3 / 2; }
+#card3 { grid-area: 3 / 1 / 4 / 2; }
+#card4 { grid-area: 4 / 1 / 5 / 2; }
+#card5 { grid-area: 5 / 1 / 6 / 2; }
+#card6 { grid-area: 6 / 1 / 7 / 2; }
 
 /* footer */
 footer {
     background: #F4F6F6;
-    grid-area: 3 / 1 / 4 / 3;
+    grid-area: 3 / 1 / 4 / 2; 
     color: #8A8C8F;
     font-size: 0.6em;
     text-align: center;
@@ -354,4 +361,103 @@ footer {
 
 a.footer-detail {
     color: #8A8C8F;
+}
+
+
+@media (min-width: 600px) {}
+
+
+@media (min-width: 900px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 20vh minmax(20vh, auto) minmax(20vh, auto);
+    }
+    
+    header {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    #nav-explore-button {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    #login {
+        width: 4px;
+    }
+
+    main {
+        grid-area: 1 / 1 / 3 / 3;
+    }
+
+    footer {
+        background: #F4F6F6;
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    #s1-content {
+        padding: 30vh 0vh 0vh 0vh;
+    }
+
+    #trip-planning-form {
+        flex-direction: row;
+    }
+
+    .form-box {
+        margin: 0% 0.25% 0% 0.25%;
+    }
+
+    .how-to-container {
+        grid-template-rows: repeat(3, minmax(80vh,auto));
+        padding: 5% 5% 5% 5%;
+    }
+
+    .how-to-content {
+        grid-gap: 0% 5%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+    
+    .how-to-description {
+        font-size: 0.8em;
+    }
+    
+    .how-to-left {
+        padding: 0% 10% 0% 10%;
+    } 
+    
+    .how-to-right {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding: 0% 10% 0% 10%;
+    }
+    
+    .box {
+        height: 55vh;
+    }
+
+    #how-to-desc-1 {
+        grid-column: 2;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 15vh;
+        padding: 10% 5% 5% 5%;
+    }
+    
+    .card {
+        min-height: 50vh;
+    }
+    
+    #card1 { grid-area: 1 / 1 / 2 / 2; }
+    #card2 { grid-area: 1 / 2 / 2 / 3; }
+    #card3 { grid-area: 1 / 3 / 2 / 4; }
+    #card4 { grid-area: 2 / 1 / 3 / 2; }
+    #card5 { grid-area: 2 / 2 / 3 / 3; }
+    #card6 { grid-area: 2 / 3 / 3 / 4; }
+
 }

@@ -30,24 +30,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('scroll', function() {
     const headerBar = document.getElementById("navigation");
-    headerBar.style.cssText = "background: #F4F6F6; box-shadow: 0 4px 2px -2px rgb(0 0 0 / 20%);";
-    // headerBar.style.border = "#8A8C8F";
-
     const navLogin = document.getElementById("login");
-    navLogin.style.backgroundImage = "url(../Travel-Planner/images/person-icon-blue.png)";
-    navLogin.style.backgroundSize = "contain";
-
     const navSymbol = document.getElementById("brand-symbol-nav");
-    navSymbol.style.color= "#22395c";
-
     const headerButton = document.getElementById("nav-explore-button");
+    const navItems = document.querySelectorAll(".nav-item");
+
+    headerBar.style.cssText = "background: #F4F6F6; box-shadow: 0 4px 2px -2px rgb(0 0 0 / 20%);";
     headerButton.style.display = "flex";
 
-    const navItems = document.querySelectorAll(".nav-item");
+    const mediaQuery = window.matchMedia('(min-width:  900px)')
     
-    for (navItem of navItems) {
-        navItem.style.color= "#22395c";
-    };
+    if (mediaQuery.matches == true) {
+        navLogin.style.backgroundImage = "url(../Travel-Planner/images/person-icon-blue.png)";
+        navLogin.style.backgroundSize = "contain";  
+        navSymbol.style.color= "#22395c";
+        headerButton.style.cssText = "display: flex; left: 50%; right: auto; transform: translate(-50%, 0%)"
+        
+        for (navItem of navItems) {
+            navItem.style.color= "#22395c";
+        };
+    }
+
+    else {
+        navLogin.display = "none"
+        navSymbol.display = "none"
+
+    }
 
     const currentScroll = window.pageYOffset;
     if (currentScroll <= 0) {
