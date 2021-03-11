@@ -9,14 +9,20 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header id="navigation">
-            <div id="nav-container">
-                <a href="" id="header-logo" class="logo"></a>
-                <a  href="" id="brand-symbol-nav" class="brand-symbol" class="nav-item">
-                    <h1>tripPlanner</h1>
-                </a>
-                <div id="nav-middle"></div>
-                <a href="" id="login" class="nav-item"></a>
+        <header id="header-bar">
+            <div id="header-container">
+                <div class="branding">
+                    <a href="" id="header-logo" class="logo"></a>
+                    <a  href="" id="brand-symbol-nav" class="brand-symbol" class="header-item">
+                        <h1>trippy</h1>
+                    </a>
+                </div>
+                <nav>
+                    <div class="nav-mobile" onclick="navDrop()"></div>
+                    <ul id="nav-list" class="nav-list-up">
+                        <li><a href="#!" id="login"></a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <a href="#section-1" id="nav-explore-button" class="button">Begin the Adventure</a>
@@ -58,7 +64,7 @@
                                 <h4>Step 2</h4>
                                 <h3>Watch the magic</h3>
                                 <p class="how-to-description">
-                                    tripPlanner will search thousands of flights to bring amazing and in-budget 
+                                    trippy will search thousands of flights to bring amazing and in-budget 
                                     itineraries right to your fingertips. As we get to know you better, we'll be
                                     able to customize recommendations for your preferences.
                                 </p>
@@ -156,7 +162,7 @@
         </main>
         <footer>
             <div class="footer-info">
-                <div id="copyright">Copyright tripPlanner LLC</div>
+                <div id="copyright">Copyright trippy LLC</div>
                 <a href="" class="footer-detail">Frequently Asked Questions</a>
                 <a href="" class="footer-detail">Partner with Us</a>
                 <a href="" class="footer-detail">Media Inquiries</a>
