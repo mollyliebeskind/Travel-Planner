@@ -33,127 +33,119 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('scroll', function() {
-    const headerBar = document.getElementById("navigation");
-    const navLogin = document.getElementById("login");
-    const navSymbol = document.getElementById("brand-symbol-nav");
+    const headerBar = document.getElementById("header-bar");
     const headerButton = document.getElementById("nav-explore-button");
-    const navItems = document.querySelectorAll(".nav-item");
+    const hamburger = document.querySelector(".nav-mobile");
+    const navSymbol = document.getElementById("brand-symbol-nav");
 
     headerBar.style.cssText = "background: #F4F6F6; box-shadow: 0 4px 2px -2px rgb(0 0 0 / 20%);";
-    headerButton.style.display = "flex";
 
     const mediaQuery = window.matchMedia('(min-width:  900px)')
+    navSymbol.style.color= "#22395c";
+    hamburger.style.backgroundImage = "url(images/hamburger-menu-blue.png)";
     
     if (mediaQuery.matches == true) {
-        navLogin.style.backgroundImage = "url(../Travel-Planner/images/person-icon-blue.png)";
-        navLogin.style.backgroundSize = "contain";  
-        navSymbol.style.color= "#22395c";
+        headerButton.style.display = "flex"; 
         headerButton.style.cssText = "display: flex; left: 50%; right: auto; transform: translate(-50%, 0%)"
-        
-        for (navItem of navItems) {
-            navItem.style.color= "#22395c";
-        };
     }
 
     else {
-        navLogin.display = "none"
         navSymbol.display = "none"
-
     }
 
     const currentScroll = window.pageYOffset;
     if (currentScroll <= 0) {
         headerBar.style = "initial";
-        navLogin.style = "initial";
         navSymbol.style = "initial";
         headerButton.style = "initial";
+        hamburger.style = "initial";
 
         for (navItem of navItems) {
             navItem.style = "initial";
-            navItem.style.color = "#22395c"
+            navItem.style.color = "#22395c";
         };
     
     };
 
 });
 
-function slideDown(target, duration) {
-    target.style.removeProperty('display');
-    const display = window.getComputedStyle(target).display;
+// function slideDown(target, duration) {
+//     target.style.removeProperty('display');
+//     const display = window.getComputedStyle(target).display;
     
-    if (display === 'none') {
-        display = 'block';
-    }
-    target.style.display = display;
+//     if (display === 'none') {
+//         display = 'block';
+//     }
+//     target.style.display = display;
 
-    // ensure that the starting state is hidden
-    const height = target.offsetHeight;    
-    target.style.height = 0;    
-    target.style.paddingTop = 0; 
-    target.style.paddingBottom = 0;  
-    target.style.marginTop = 0;  
-    target.style.marginBottom = 0;  
-    target.style.overflow = 'hidden'; 
+//     // ensure that the starting state is hidden
+//     const height = target.offsetHeight;    
+//     target.style.height = 0;    
+//     target.style.paddingTop = 0; 
+//     target.style.paddingBottom = 0;  
+//     target.style.marginTop = 0;  
+//     target.style.marginBottom = 0;  
+//     target.style.overflow = 'hidden'; 
 
-    // slide down
-    target.style.boxSizing = 'border-box'; 
-    target.style.transitionProperty = "height, margin, padding";  
-    target.style.transitionDuration = duration + 'ms'; 
-    target.style.height = height + 'px'; 
-    target.style.removeProperty('padding-top');   
-    target.style.removeProperty('padding-bottom');   
-    target.style.removeProperty('margin-top');   
-    target.style.removeProperty('margin-bottom');  
+//     // slide down
+//     target.style.boxSizing = 'border-box'; 
+//     target.style.transitionProperty = "height, margin, padding";  
+//     target.style.transitionDuration = duration + 'ms'; 
+//     target.style.height = height + 'px'; 
+//     target.style.removeProperty('padding-top');   
+//     target.style.removeProperty('padding-bottom');   
+//     target.style.removeProperty('margin-top');   
+//     target.style.removeProperty('margin-bottom');  
 
-    // remove uneeded properties off screen
-    window.setTimeout(function(){
-        target.style.removeProperty('height'); 
-        target.style.removeProperty('overflow'); 
-        target.style.removeProperty('transition-duration'); 
-        target.style.removeProperty('transition-property'); 
-      }, duration);
+//     // remove uneeded properties off screen
+//     window.setTimeout(function(){
+//         target.style.removeProperty('height'); 
+//         target.style.removeProperty('overflow'); 
+//         target.style.removeProperty('transition-duration'); 
+//         target.style.removeProperty('transition-property'); 
+//       }, duration);
 
-    }
+//     }
 
-function slideUp(target, duration) {
-    // set the transition properties
-    target.style.transitionProperty = 'height, margin, padding'; 
-    target.style.transitionDuration = duration + 'ms'; 
-    target.style.boxSizing = 'border-box'; 
-    target.style.height = target.offsetHeight + 'px';
+// function slideUp(target, duration) {
+//     // set the transition properties
+//     target.style.transitionProperty = 'height, margin, padding'; 
+//     target.style.transitionDuration = duration + 'ms'; 
+//     target.style.boxSizing = 'border-box'; 
+//     target.style.height = target.offsetHeight + 'px';
 
-    // hide the target
-    target.style.height = 0; 
-    target.style.paddingTop = 0; 
-    target.style.paddingBottom = 0; 
-    target.style.marginTop = 0; 
-    target.style.marginBottom = 0; 
-    target.style.overflow = 'hidden';
+//     // hide the target
+//     target.style.height = 0; 
+//     target.style.paddingTop = 0; 
+//     target.style.paddingBottom = 0; 
+//     target.style.marginTop = 0; 
+//     target.style.marginBottom = 0; 
+//     target.style.overflow = 'hidden';
 
-    // after action completes, remove the rest of the properties off screen
-    window.setTimeout(function() {
-        target.style.display = 'none'; 
-        target.style.removeProperty('height');
-        target.style.removeProperty('padding-top');  
-        target.style.removeProperty('padding-bottom');  
-        target.style.removeProperty('margin-top');  
-        target.style.removeProperty('margin-bottom');  
-        target.style.removeProperty('overflow');         
-        target.style.removeProperty('transition-duration');  
-        target.style.removeProperty('transition-property');  
-      }, 
-      duration);
-    };
+//     // after action completes, remove the rest of the properties off screen
+//     window.setTimeout(function() {
+//         target.style.display = 'none'; 
+//         target.style.removeProperty('height');
+//         target.style.removeProperty('padding-top');  
+//         target.style.removeProperty('padding-bottom');  
+//         target.style.removeProperty('margin-top');  
+//         target.style.removeProperty('margin-bottom');  
+//         target.style.removeProperty('overflow');         
+//         target.style.removeProperty('transition-duration');  
+//         target.style.removeProperty('transition-property');  
+//       }, 
+//       duration);
+//     };
 
-function slideToggle(target, duration) {
-    let slideToggle = (target, duration = 500) => {
-        if (window.getComputedStyle(target).display === 'none') {
-          return slideDown(target, duration);
-        } else {
-          return slideUp(target, duration);
-        }
-      }
-} ;
+// function slideToggle(target, duration) {
+//     let slideToggle = (target, duration = 500) => {
+//         if (window.getComputedStyle(target).display === 'none') {
+//           return slideDown(target, duration);
+//         } else {
+//           return slideUp(target, duration);
+//         }
+//       }
+// } ;
 
 
 function navDrop() {
