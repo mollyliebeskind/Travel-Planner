@@ -7,9 +7,9 @@ Landing page for developing a travel planner based on budget rather than locatio
 * Hamburger navigation drop down
 
 ## Structure
-index.html
-css
--- style.css
-js
--- app.css
-images
++-- _index.html
++-- _css
+|   +-- style.css
++-- _js
+|   +-- app.js
++-- _images
