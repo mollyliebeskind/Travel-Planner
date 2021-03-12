@@ -11,10 +11,10 @@ Landing page for developing a travel planner based on budget rather than locatio
 
 +-- _css
 
-|   +-- style.css
+|   ++--- style.css
 
 +-- _js
 
-|   +-- app.js
+|   ++--- app.js
 
 +-- _images
