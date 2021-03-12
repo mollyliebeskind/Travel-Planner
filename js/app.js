@@ -59,11 +59,6 @@ document.addEventListener('scroll', function() {
         navSymbol.style = "initial";
         headerButton.style = "initial";
         hamburger.style = "initial";
-
-        for (navItem of navItems) {
-            navItem.style = "initial";
-            navItem.style.color = "#22395c";
-        };
     
     };
 
