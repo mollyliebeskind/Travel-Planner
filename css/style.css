@@ -189,6 +189,7 @@ nav ul li a:visited:hover {
     right: 2%;
     height: 30px;
     width: 40px;
+    cursor: pointer;
   }
 
 #login {
